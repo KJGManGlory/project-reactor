@@ -30,7 +30,7 @@ public class Subscriber_1 {
     @Test
     public void test3() {
         Flux<Integer> publisher = Flux.range(0, 10);
-        publisher.subscribe(new BaseSubscriber<>() {
+        publisher.subscribe(new BaseSubscriber<Integer>() {
             @Override
             protected void hookOnSubscribe(Subscription subscription) {
                 subscription.request(5);
